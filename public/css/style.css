@@ -1,0 +1,50 @@
+body {
+    background-image: url("../img/background2.jpg");
+    background-size: cover;
+    margin: 5%;
+}
+
+.hero {
+    background-color: rgb(187, 137, 233);
+    opacity: 90%;
+    font-family: 'Silkscreen', cursive;
+    font-size: x-large;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav {
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: right;
+    font-size: x-large;
+}
+
+.nav-item {
+    font-family: 'Open Sans', sans-serif;
+    display: inline;
+    padding: 5px;
+}
+
+.nav-item:hover {
+    font-size: xx-large;
+}
+
+main {
+    background-color: whitesmoke;
+    opacity: 90%;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+footer {
+    font-family: 'Open Sans', sans-serif;
+    background-color: whitesmoke;
+    opacity: 90%;
+    padding: 10px;
+}

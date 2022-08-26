@@ -1,0 +1,35 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Tech Blog</title>
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Silkscreen&display=swap" rel="stylesheet">
+</head>
+
+<body class="flex-column min-100-vh">
+  <header class="hero">
+    <h1 class="app-title"><a href="/">The Tech Blog</a></h1>
+  </header>
+  <nav class="navbar">
+    <ul>
+      <li class="li-inline nav-item"><a class="nav" href="/">Home</a></li>
+      <li class="li-inline nav-item"><a class="nav" href="/dashboard">Dashboard</a></li>
+      <li class="li-inline nav-item"><a class="nav" href="/login">Login</a></li>
+      <li class="li-inline nav-item"><a class="nav" href="#" id="logout-link">Logout</a></li>
+    </ul>
+  </nav>
+
+  <main class="col-auto">
+   {{{body}}} 
+  </main>
+
+  <footer class="flex-row justify-center">
+    &copy; Sophia De La Rosa
+  </footer>
+</body>
+
+</html>
+<script src="/js/logout.js"></script>
