@@ -5,12 +5,13 @@ const withAuth = require("../utils/auth");
 router.get("/", withAuth, (req, res) => {
     Post.findAll({
       where: {
-        userId: req.session.userId
+        userId: req.session.userId,
+        userName: req.session.username
       }
     })
       .then(dbPostData => {
         const posts = dbPostData.map((post) => post.get({ plain: true }));
-        
+        console.log("@@@@", posts)
         res.render("all-posts", {
           layout: "dashboard",
           posts
@@ -22,7 +23,7 @@ router.get("/", withAuth, (req, res) => {
       });
   });
 
- /*  router.get("/new", withAuth, (req, res) => {
+   router.get("/new", withAuth, (req, res) => {
     res.render("new-post", {
       layout: "dashboard"
     });
@@ -45,6 +46,6 @@ router.get("/", withAuth, (req, res) => {
       .catch(err => {
         res.status(500).json(err);
       });
-  }); */
+  }); 
   
 module.exports = router;

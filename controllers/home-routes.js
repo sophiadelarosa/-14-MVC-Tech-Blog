@@ -18,7 +18,7 @@ router.get("/", (req, res) => {
 });
 
 // get single post
-/* router.get("/post/:id", (req, res) => {
+router.get("/post/:id", (req, res) => {
   Post.findByPk(req.params.id, {
     include: [
       User,
@@ -40,11 +40,11 @@ router.get("/", (req, res) => {
     .catch((err) => {
       res.status(500).json(err);
     });
-}); */
+});
 
 router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect("/");
+    res.redirect("/dashboard");
     return;
   }
 
@@ -54,7 +54,7 @@ router.get("/login", (req, res) => {
 
 router.get("/signup", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect("/");
+    res.redirect("/dashboard");
     return;
   }
 

@@ -14,7 +14,8 @@ const sess = {
   secret: 'secret',
   cookie: {},
   resave: true,  
-saveUninitialized: true,
+  saveUninitialized: true,
+  maxAge: Date.now() + (30 * 86400 * 1000),
   store: new SequelizeStore({
     db: sequelize
   })
