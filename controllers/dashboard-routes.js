@@ -6,7 +6,7 @@ router.get("/", withAuth, (req, res) => {
     Post.findAll({
       where: {
         userId: req.session.userId,
-        userName: req.session.username
+        //userName: req.session.username
       }
     })
       .then(dbPostData => {
